@@ -25,8 +25,9 @@ public class ScreenFaderSingleton : Singleton<ScreenFaderSingleton>
 
 
     // Use this for pre-initialization
-    void Awake()
+    new void Awake()
     {
+		base.Awake ();
         //Check to see if our Fader Reference is null. is FaderReferenceSetup.Instance(ouFaderReference) null or is there one somewhere
         //in the scene? If there is, We Fade its alpha in and out to create the "fade" effect.  That FaderCanvas and RawImage Child will
         //be set to DontDestroy and Will follow us through all the scenes.

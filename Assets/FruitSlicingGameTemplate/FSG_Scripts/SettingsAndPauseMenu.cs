@@ -120,6 +120,7 @@ public class SettingsAndPauseMenu : MonoBehaviour
         {
             //if isPaused is true then Time.timeScale = 0f
             Time.timeScale = 0f;
+			Interstitial.Instance.ShowGamecontinue ();
         }
         else
         {
@@ -203,6 +204,8 @@ public class SettingsAndPauseMenu : MonoBehaviour
 
     public void CallMenuOnly()
     {
+		Interstitial.Instance.ShowGamecontinue ();
+
         //set onlyMenuIsUp to true (so we can't call "Pause and Menu")... double menus would send the menu away... but would pause.. which would be bad...
         onlyMenuIsUp = true;
 
